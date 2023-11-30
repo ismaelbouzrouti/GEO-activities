@@ -27,7 +27,7 @@
     map.on('click',function(e){
 
         let coordinates =  map.mouseEventToLatLng(e.originalEvent);
-        let marker = new L.marker([coordinates.lat, coordinates.lng]).addTo(map);
+        new L.marker([coordinates.lat, coordinates.lng]).addTo(map);
     });
 
 
