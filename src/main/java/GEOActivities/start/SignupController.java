@@ -6,11 +6,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class SignupController {
 
-    @Autowired
     private UserRepository userRepository;
 
     @GetMapping("/signup")
@@ -21,7 +21,7 @@ public class SignupController {
     }
 
     @PostMapping("/signup")
-        public String submitSignUpForm(@ModelAttribute("user")User user){
+        public String submitSignUpForm(@ModelAttribute("user") User user){
             userRepository.save(user);
 
 
