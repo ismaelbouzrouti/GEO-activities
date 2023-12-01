@@ -7,7 +7,7 @@
 <body>
 <form action="#" th:action="@{/signup}" method="post" th:object="${user}">
     <label for="name">Name</label>
-    <input type="text" id="name" name="name" th:field="*{name}"> <br>
+    <input type="text" id="name" name="name" th:field="*{userName}"> <br>
     <label for="email">Email</label>
     <input type="text" id="email" name="email" th:field="*{email}"> <br>
     <label for="password">Password</label>
